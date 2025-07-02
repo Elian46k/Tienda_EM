@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoVerde - Finalizar compra</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">🌿 EcoVerde</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="checkout.html" class="active">Finalizar compra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout">
+            <h1>Finalizar Compra</h1>
+            <form action="#" method="post" class="formulario-compra">
+                <h2>Datos del Cliente</h2>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required />
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required />
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required />
+
+                <h2>Método de Pago</h2>
+                <label>
+                    <input type="radio" name="pago" value="tarjeta" checked />
+                    Tarjeta de crédito/débito
+                </label>
+                <label>
+                    <input type="radio" name="pago" value="yape" />
+                    Yape/Plin
+                </label>
+                <label>
+                    <input type="radio" name="pago" value="contraentrega" />
+                    Pago contra entrega
+                </label>
+
+                <button type="submit" class="boton-verde">Realizar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Modal de confirmación de compra -->
+    <div id="modalCompra" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h2>🎉 ¡Compra Realizada!</h2>
+                <span class="cerrar-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="resumen-compra">
+                    <div id="detallesCliente"></div>
+                </div>
+                <div class="mensaje-exito">
+                    <p>✅ Tu pedido ha sido procesado exitosamente</p>
+                    <p>📧 Recibirás un correo de confirmación en breve</p>
+                    <p>🚚 El envío se realizará en 2-3 días hábiles</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="cerrarModalYRedirigir()" class="boton-verde">Continuar Comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-profesional">
+        <div class="footer-container">
+            <!-- Sección de información de la empresa -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3>🌿 EcoVerde</h3>
+                </div>
+                <p class="footer-descripcion">
+                    Tu tienda de productos ecológicos y sostenibles. Contribuimos a un futuro más limpio y saludable con productos 100% naturales.
+                </p>
+                <div class="footer-contacto">
+                    <div class="contacto-item">
+                        <span class="icono">📧</span>
+                        <span>info@ecoverde.com</span>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="icono">📱</span>
+                        <span>+51 936 623 658</span>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="icono">📍</span>
+                        <span>Lima, Perú</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de enlaces rápidos -->
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                    <li><a href="checkout.html">Finalizar Compra</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección de categorías -->
+            <div class="footer-section">
+                <h4>Categorías</h4>
+                <ul class="footer-links">
+                    <li><a href="tienda.html">Hogar</a></li>
+                    <li><a href="tienda.html">Cuidado Personal</a></li>
+                    <li><a href="tienda.html">Oficina</a></li>
+                    <li><a href="tienda.html">Alimentos</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección de contacto y WhatsApp -->
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <div class="whatsapp-contacto">
+                    <a href="https://wa.me/51936623658" class="whatsapp-btn" target="_blank">
+                        <span class="whatsapp-icon">💬</span>
+                        <span>Chatear por WhatsApp</span>
+                    </a>
+                    <p class="whatsapp-text">¡Haz tu pedido directamente por WhatsApp!</p>
+                </div>
+                <div class="redes-sociales">
+                    <h5>Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Reddit">
+                            <i class="fab fa-reddit-alien"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer inferior -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 EcoVerde - Todos los derechos reservados</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Devoluciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoVerde - Tienda</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tienda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">🌿 EcoVerde</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html" class="active">Tienda</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="checkout.html">Finalizar compra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tienda">
+            <h1>Catálogo de Productos</h1>
+            <div class="productos-grid">
+                <div class="producto">
+                    <img src="img/Shampoo organico.png" alt="Shampoo Orgánico" />
+                    <h3>Shampoo Orgánico</h3>
+                    <p>S/. 25.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Shampoo Orgánico',
+                        precio: 25.00,
+                        imagen: 'img/Shampoo organico.png'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/Jabon-avena.png" alt="Jabón de Avena" />
+                    <h3>Jabón de Avena</h3>
+                    <p>S/. 12.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Jabón de Avena',
+                        precio: 12.00,
+                        imagen: 'img/Jabon-avena.png'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/lampara-natural.jpg" alt="Lámpara Natural" />
+                    <h3>Lámpara Natural</h3>
+                    <p>S/. 35.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Lámpara Natural',
+                        precio: 35.00,
+                        imagen: 'img/lampara-natural.jpg'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/pasta-dental-menta-lateral.jpg" alt="Pasta de Dientes Natural" />
+                    <h3>Pasta de Dientes Natural</h3>
+                    <p>S/. 18.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Pasta de Dientes Natural',
+                        precio: 18.00,
+                        imagen: 'img/pasta-dental-menta-lateral.jpg'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/esponja_natural.png" alt="Esponja Vegetal" />
+                    <h3>Esponja Vegetal</h3>
+                    <p>S/. 10.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Esponja Vegetal',
+                        precio: 10.00,
+                        imagen: 'img/esponja_natural.png'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/cepillo_bambu.png" alt="Cepillo de Bambú" />
+                    <h3>Cepillo de Bambú</h3>
+                    <p>S/. 14.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Cepillo de Bambú',
+                        precio: 14.00,
+                        imagen: 'img/cepillo_bambu.png'
+                    })">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="productos-grid">
+                <div class="producto">
+                    <img src="img/velas naturales.jpg" alt="Velas Naturales" />
+                    <h3>Velas Naturales</h3>
+                    <p>S/. 2.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Velas Naturales',
+                        precio: 2.00,
+                        imagen: 'img/velas naturales.jpg'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/Detergente-Ecologico.png" alt="Detergente ecológico" />
+                    <h3>Detergente ecológico</h3>
+                    <p>S/. 12.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Detergente ecológico',
+                        precio: 12.00,
+                        imagen: 'img/Detergente-Ecologico.png'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/Infusiones Naturales.png" alt="Infusiones Naturales" />
+                    <h3>Infusiones Naturales</h3>
+                    <p>S/. 4.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Infusiones Naturales',
+                        precio: 4.00,
+                        imagen: 'img/Infusiones Naturales.png'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/Botellas-reusables.png" alt="Botella Reutilizable" />
+                    <h3>Botella Reutilizable</h3>
+                    <p>S/. 5.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Botella Reutilizable',
+                        precio: 5.00,
+                        imagen: 'img/Botellas-reusables.png'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/compost_organico.png" alt="Fertilizante Orgánico" />
+                    <h3>Fertilizante Orgánico</h3>
+                    <p>S/. 15.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Fertilizante Orgánico',
+                        precio: 15.00,
+                        imagen: 'img/compost_organico.png'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/Limpiador.png" alt="Limpiador multiusos" />
+                    <h3>Limpiador multiusos</h3>
+                    <p>S/. 14.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Limpiador multiusos',
+                        precio: 14.00,
+                        imagen: 'img/Limpiador.png'
+                    })">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="productos-grid">
+                <div class="producto">
+                    <img src="img/Protector Solar.jpg" alt="Protector Solar" />
+                    <h3>Protector Solar</h3>
+                    <p>S/. 25.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Protector Solar',
+                        precio: 25.00,
+                        imagen: 'img/Protector Solar.jpg'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/Frutos secos.jpg" alt="Frutos secos" />
+                    <h3>Frutos secos</h3>
+                    <p>S/. 9.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Frutos secos',
+                        precio: 9.00,
+                        imagen: 'img/Frutos secos.jpg'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/papel_higienico.jpg" alt="Papel higiénico" />
+                    <h3>Papel higiénico</h3>
+                    <p>S/. 2.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Papel higiénico',
+                        precio: 2.00,
+                        imagen: 'img/papel_higienico.jpg'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/toalla reusable.png" alt="Toalla Reusable" />
+                    <h3>Toalla Reusable</h3>
+                    <p>S/. 10.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Toalla Reusable',
+                        precio: 10.00,
+                        imagen: 'img/toalla reusable.png'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/juguete de madera.png" alt="Juguete de madera" />
+                    <h3>Juguete de madera</h3>
+                    <p>S/. 15.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Juguete de madera',
+                        precio: 15.00,
+                        imagen: 'img/juguete de madera.png'
+                    })">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/bolso de algodón.png" alt="Bolsa de algodón" />
+                    <h3>Bolsa de algodón</h3>
+                    <p>S/. 4.00</p>
+                    <button onclick="agregarAlCarrito({
+                        nombre: 'Bolsa de algodón',
+                        precio: 4.00,
+                        imagen: 'img/bolso de algodón.png'
+                    })">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-profesional">
+        <div class="footer-container">
+            <!-- Sección de información de la empresa -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3>🌿 EcoVerde</h3>
+                </div>
+                <p class="footer-descripcion">
+                    Tu tienda de productos ecológicos y sostenibles. Contribuimos a un futuro más limpio y saludable con productos 100% naturales.
+                </p>
+                <div class="footer-contacto">
+                    <div class="contacto-item">
+                        <span class="icono">📧</span>
+                        <span>info@ecoverde.com</span>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="icono">📱</span>
+                        <span>+51 936 623 658</span>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="icono">📍</span>
+                        <span>Lima, Perú</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de enlaces rápidos -->
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                    <li><a href="checkout.html">Finalizar Compra</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección de categorías -->
+            <div class="footer-section">
+                <h4>Categorías</h4>
+                <ul class="footer-links">
+                    <li><a href="tienda.html">Hogar</a></li>
+                    <li><a href="tienda.html">Cuidado Personal</a></li>
+                    <li><a href="tienda.html">Oficina</a></li>
+                    <li><a href="tienda.html">Alimentos</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección de contacto y WhatsApp -->
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <div class="whatsapp-contacto">
+                    <a href="https://wa.link/afxznh" class="whatsapp-btn" target="_blank">
+                        <span class="whatsapp-icon">💬</span>
+                        <span>Chatear por WhatsApp</span>
+                    </a>
+                    <p class="whatsapp-text">¡Haz tu pedido directamente por WhatsApp!</p>
+                </div>
+                <div class="redes-sociales">
+                    <h5>Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Reddit">
+                            <i class="fab fa-reddit-alien"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer inferior -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 EcoVerde - Todos los derechos reservados</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Devoluciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

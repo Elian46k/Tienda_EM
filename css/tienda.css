@@ -1,0 +1,169 @@
+/* Estilos específicos para la página de tienda */
+
+.tienda h1 {
+    text-align: center;
+    margin-top: 2rem;
+    color: #2e7d32;
+}
+
+.tienda {
+    margin: 10px;
+    padding: 2rem;
+}
+
+/* Estilos para la grilla de productos - 3 filas x 6 columnas */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para cada producto individual */
+.producto {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.producto h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #2e7d32;
+    flex-grow: 1;
+    min-height: 48px;
+}
+
+.producto p {
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    min-height: 24px;
+}
+
+.producto button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.producto button:hover {
+    background-color: #27642a;
+}
+
+/* Responsive para la tienda */
+/* Tablets - 4 columnas */
+@media (max-width: 1024px) {
+    .productos-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .producto {
+        min-height: 260px;
+    }
+}
+
+/* Tablets pequeñas - 3 columnas */
+@media (max-width: 768px) {
+    .tienda {
+        padding: 1rem;
+    }
+    
+    .productos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    
+    .producto {
+        padding: 0.75rem;
+        min-height: 240px;
+    }
+    
+    .producto h3 {
+        font-size: 0.9rem;
+    }
+    
+    .producto img {
+        height: 100px;
+    }
+}
+
+/* Móviles grandes - 2 columnas */
+@media (max-width: 600px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .producto {
+        min-height: 220px;
+        padding: 0.5rem;
+    }
+    
+    .producto h3 {
+        font-size: 0.85rem;
+    }
+    
+    .producto p {
+        font-size: 1rem;
+    }
+    
+    .producto img {
+        height: 80px;
+    }
+}
+
+/* Móviles pequeños - 1 columna */
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 300px;
+    }
+    
+    .producto {
+        min-height: auto;
+        padding: 1rem;
+    }
+    
+    .producto img {
+        height: 120px;
+    }
+    
+    .producto h3 {
+        font-size: 1rem;
+    }
+}

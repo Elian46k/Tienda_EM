@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoVerde - Carrito</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/carrito.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">🌿 EcoVerde</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="carrito.html" class="active">Carrito</a></li>
+                <li><a href="checkout.html">Finalizar compra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carrito">
+            <h1>Carrito de Compras</h1>
+            <div class="carrito-contenido">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los productos se cargarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+
+                <div class="carrito-acciones">
+                    <button onclick="vaciarCarrito()" class="boton-rojo">Vaciar Carrito</button>
+                    <a href="tienda.html" class="boton-secundario">Seguir Comprando</a>
+                </div>
+
+                <div class="carrito-total">
+                    <p><strong>Total:</strong> S/. 0.00</p>
+                    <a href="checkout.html" class="boton-verde">Finalizar compra</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-profesional">
+        <div class="footer-container">
+            <!-- Sección de información de la empresa -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3>🌿 EcoVerde</h3>
+                </div>
+                <p class="footer-descripcion">
+                    Tu tienda de productos ecológicos y sostenibles. Contribuimos a un futuro más limpio y saludable con productos 100% naturales.
+                </p>
+                <div class="footer-contacto">
+                    <div class="contacto-item">
+                        <span class="icono">📧</span>
+                        <span>info@ecoverde.com</span>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="icono">📱</span>
+                        <span>+51 936 623 658</span>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="icono">📍</span>
+                        <span>Lima, Perú</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de enlaces rápidos -->
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                    <li><a href="checkout.html">Finalizar Compra</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección de categorías -->
+            <div class="footer-section">
+                <h4>Categorías</h4>
+                <ul class="footer-links">
+                    <li><a href="tienda.html">Hogar</a></li>
+                    <li><a href="tienda.html">Cuidado Personal</a></li>
+                    <li><a href="tienda.html">Oficina</a></li>
+                    <li><a href="tienda.html">Alimentos</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección de contacto y WhatsApp -->
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <div class="whatsapp-contacto">
+                    <a href="https://wa.me/51936623658" class="whatsapp-btn" target="_blank">
+                        <span class="whatsapp-icon">💬</span>
+                        <span>Chatear por WhatsApp</span>
+                    </a>
+                    <p class="whatsapp-text">¡Haz tu pedido directamente por WhatsApp!</p>
+                </div>
+                <div class="redes-sociales">
+                    <h5>Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Reddit">
+                            <i class="fab fa-reddit-alien"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer inferior -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 EcoVerde - Todos los derechos reservados</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Devoluciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
